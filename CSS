@@ -1,0 +1,42 @@
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+ background-color: #94B4D2;
+}
+
+#gameContainer {
+ position: relative;
+ width: 320px;
+ height: 480px;
+ background-color: #4EC0CA;
+}
+
+#bird {
+ position: absolute;
+ top: 50%;
+ left: 20%;
+ width: 20px;
+ height: 20px;
+ background-color: #F2C218;
+ border-radius: 50%;
+}
+
+.pipe {
+ position: absolute;
+ width: 20px;
+ height: 100px;
+ background-color: #74B49B;
+}
+
+#startBtn {
+ position: absolute;
+ bottom: 20px;
+ left: 50%;
+ transform: translateX(-50%);
+ padding: 10px 20px;
+ font-size: 18px;
+ cursor: pointer;
+}
