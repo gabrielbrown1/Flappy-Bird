@@ -1,0 +1,34 @@
+let bird = document.getElementById('bird');
+let startBtn = document.getElementById('startBtn');
+let score = 0;
+let interval = null;
+
+function startGame() {
+ startBtn.style.display = 'none';
+ interval = setInterval(update, 20);
+ document.addEventListener('keydown', jump);
+}
+
+function update() {
+ let birdBottom = parseInt(window.getComputedStyle(bird).getPropertyValue('bottom'));
+ bird.style.bottom = birdBottom + 5 + 'px';
+
+ if (birdBottom >= 430) {
+    die();
+ }
+
+ // Pipes logic here
+}
+
+function jump() {
+ let birdBottom = parseInt(window.getComputedStyle(bird).getPropertyValue('bottom'));
+ bird.style.bottom = birdBottom - 50 + 'px';
+}
+
+function die() {
+ clearInterval(interval);
+ alert('Game Over! Score: ' + score);
+ bird.style.bottom = '50%';
+ startBtn.style.display = 'block';
+ score = 0;
+}
